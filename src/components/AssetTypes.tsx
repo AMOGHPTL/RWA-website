@@ -78,7 +78,7 @@ export default function AssetTypes() {
   const { ref, visible } = useReveal()
 
   return (
-    <section id="assets" ref={ref} className="py-24 md:py-32 relative overflow-hidden bg-white">
+    <section id="assets" ref={ref} className="py-24 md:py-32 relative overflow-hidden bg-[#f4f2fa]">
       <div className="orb w-[600px] h-[600px] bg-sky-400/[0.1] -top-20 -right-40" />
       <div className="orb w-[500px] h-[500px] bg-violet-400/[0.1] bottom-0 -left-40" />
 

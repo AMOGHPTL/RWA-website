@@ -1,28 +1,5 @@
-import { useState, useEffect } from "react";
-import tokenizationImg from "../assets/hero.svg";
-import bgImg from "../assets/bg.png";
-
-interface TimeLeft {
-  days: number;
-  hours: number;
-  minutes: number;
-  seconds: number;
-}
-
-function CountUnit({ value, label }: { value: number; label: string }) {
-  return (
-    <div className="flex flex-col items-center gap-2">
-      <div className="glass rounded-2xl w-[72px] h-[72px] sm:w-20 sm:h-20 md:w-24 md:h-24 flex items-center justify-center animate-pulse-glow">
-        <span className="countdown-digit text-white">
-          {String(value).padStart(2, "0")}
-        </span>
-      </div>
-      <span className="text-slate-500 text-[10px] sm:text-xs uppercase tracking-widest font-medium">
-        {label}
-      </span>
-    </div>
-  );
-}
+import { useState } from "react";
+import bgImg from "../assets/bg2.png";
 
 const STATS = [
   { value: "47,200+", label: "Investors Waitlisted" },
@@ -31,37 +8,10 @@ const STATS = [
   { value: "50+", label: "Countries" },
 ];
 
-const LAUNCH_DATE = new Date("2026-12-01T00:00:00");
-
 export default function Hero() {
-  const [timeLeft, setTimeLeft] = useState<TimeLeft>({
-    days: 0,
-    hours: 0,
-    minutes: 0,
-    seconds: 0,
-  });
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState("");
-
-  useEffect(() => {
-    const tick = () => {
-      const diff = LAUNCH_DATE.getTime() - Date.now();
-      if (diff <= 0) {
-        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
-        return;
-      }
-      setTimeLeft({
-        days: Math.floor(diff / 86_400_000),
-        hours: Math.floor((diff % 86_400_000) / 3_600_000),
-        minutes: Math.floor((diff % 3_600_000) / 60_000),
-        seconds: Math.floor((diff % 60_000) / 1_000),
-      });
-    };
-    tick();
-    const id = setInterval(tick, 1000);
-    return () => clearInterval(id);
-  }, []);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -78,10 +28,10 @@ export default function Hero() {
       className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden dark-section"
       style={{
         backgroundColor: "#060612",
-        backgroundImage: `linear-gradient(rgba(139, 92, 246, 0.045) 1px, transparent 1px), linear-gradient(90deg, rgba(139, 92, 246, 0.045) 1px, transparent 1px), url(${bgImg})`,
-        backgroundSize: "44px 44px, 44px 44px, cover",
-        backgroundPosition: "center, center, center",
-        backgroundRepeat: "repeat, repeat, no-repeat",
+        backgroundImage: `linear-gradient(rgba(6,6,18,0.18), rgba(6,6,18,0.10)), linear-gradient(rgba(139, 92, 246, 0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(139, 92, 246, 0.04) 1px, transparent 1px), url(${bgImg})`,
+        backgroundSize: "cover, 44px 44px, 44px 44px, cover",
+        backgroundPosition: "center, center, center, center",
+        backgroundRepeat: "no-repeat, repeat, repeat, no-repeat",
       }}
     >
       {/* Background orbs */}
@@ -167,7 +117,7 @@ export default function Hero() {
         {/* Headline */}
         <h1
           className="text-5xl sm:text-6xl md:text-7xl lg:text-[82px] font-extrabold text-white leading-[1.05] tracking-[-0.03em] mb-6 animate-slide-up"
-          style={{ animationDelay: "0.15s" }}
+          style={{ animationDelay: "0.15s", textShadow: "0 2px 24px rgba(0,0,0,0.55)" }}
         >
           Own a Piece of
           <br />
@@ -176,13 +126,13 @@ export default function Hero() {
 
         {/* Subtext */}
         <p
-          className="text-slate-400 text-base sm:text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed animate-slide-up"
-          style={{ animationDelay: "0.25s" }}
+          className="text-slate-100 text-base sm:text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed animate-slide-up"
+          style={{ animationDelay: "0.25s", textShadow: "0 1px 12px rgba(0,0,0,0.5)" }}
         >
           ScripFi brings institutional-grade real-world asset tokenization to
           everyone. Invest in premium real estate, commodities, and
           infrastructure — starting from just{" "}
-          <span className="text-white font-medium">$50</span>.
+          <span className="text-white font-semibold">$50</span>.
         </p>
 
         {/* Hero Image */}
@@ -199,26 +149,6 @@ export default function Hero() {
             <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
             Real Assets → On-Chain Tokens
           </div>
-        </div>
-
-        {/* Countdown */}
-        <div
-          className="flex items-end justify-center gap-3 sm:gap-4 md:gap-5 mb-10 animate-slide-up"
-          style={{ animationDelay: "0.3s" }}
-        >
-          <CountUnit value={timeLeft.days} label="Days" />
-          <span className="text-violet-400/60 font-light text-3xl mb-10">
-            :
-          </span>
-          <CountUnit value={timeLeft.hours} label="Hours" />
-          <span className="text-violet-400/60 font-light text-3xl mb-10">
-            :
-          </span>
-          <CountUnit value={timeLeft.minutes} label="Min" />
-          <span className="text-violet-400/60 font-light text-3xl mb-10">
-            :
-          </span>
-          <CountUnit value={timeLeft.seconds} label="Sec" />
         </div>
 
         {/* Email form */}
@@ -268,7 +198,7 @@ export default function Hero() {
 
         {/* Trust line */}
         <div
-          className="flex flex-wrap items-center justify-center gap-5 text-slate-500 text-xs animate-fade-in"
+          className="flex flex-wrap items-center justify-center gap-5 text-slate-200 text-xs animate-fade-in"
           style={{ animationDelay: "0.45s" }}
         >
           {[
@@ -295,7 +225,7 @@ export default function Hero() {
               <div className="text-xl sm:text-2xl md:text-3xl font-bold text-gradient mb-1">
                 {stat.value}
               </div>
-              <div className="text-slate-400 text-xs sm:text-sm">
+              <div className="text-slate-200 text-xs sm:text-sm">
                 {stat.label}
               </div>
             </div>

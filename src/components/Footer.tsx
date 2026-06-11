@@ -42,7 +42,7 @@ const SOCIALS = [
 
 export default function Footer() {
   return (
-    <footer className="border-t border-violet-200/50 pt-16 pb-10 relative overflow-hidden bg-white">
+    <footer className="border-t border-violet-200/50 pt-16 pb-10 relative overflow-hidden bg-[#f4f2fa]">
       <div className="orb w-[400px] h-[400px] bg-violet-400/[0.08] bottom-0 right-0" />
 
       <div className="max-w-7xl mx-auto px-5 sm:px-8 relative z-10">

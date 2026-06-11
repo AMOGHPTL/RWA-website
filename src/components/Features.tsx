@@ -96,7 +96,7 @@ export default function Features() {
   const { ref, visible } = useReveal()
 
   return (
-    <section id="features" ref={ref} className="py-24 md:py-32 relative overflow-hidden bg-white">
+    <section id="features" ref={ref} className="py-24 md:py-32 relative overflow-hidden bg-[#f4f2fa]">
       <div className="orb w-[500px] h-[500px] bg-violet-400/[0.1] top-0 right-0" />
       <div className="orb w-[400px] h-[400px] bg-sky-400/[0.07] bottom-0 left-0" />
 

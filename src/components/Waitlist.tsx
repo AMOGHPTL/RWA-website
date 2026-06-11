@@ -32,7 +32,7 @@ export default function Waitlist() {
   }
 
   return (
-    <section id="waitlist" className="py-24 md:py-32 relative overflow-hidden" style={{ background: 'linear-gradient(180deg, #f8f7ff 0%, #ede9fe 50%, #f8f7ff 100%)' }}>
+    <section id="waitlist" className="py-24 md:py-32 relative overflow-hidden" style={{ background: 'linear-gradient(180deg, #f4f2fa 0%, #e9e4f8 50%, #f4f2fa 100%)' }}>
       <div className="orb w-[800px] h-[800px] bg-violet-400/[0.15] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
 
       <div className="max-w-5xl mx-auto px-5 sm:px-8 relative z-10">

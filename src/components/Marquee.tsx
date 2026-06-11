@@ -15,9 +15,9 @@ export default function Marquee() {
   const doubled = [...ITEMS, ...ITEMS]
 
   return (
-    <div className="py-5 border-y border-violet-200/50 overflow-hidden relative bg-white">
-      <div className="absolute left-0 top-0 bottom-0 w-20 z-10 bg-gradient-to-r from-white to-transparent" />
-      <div className="absolute right-0 top-0 bottom-0 w-20 z-10 bg-gradient-to-l from-white to-transparent" />
+    <div className="py-5 border-y border-violet-200/50 overflow-hidden relative bg-[#f4f2fa]">
+      <div className="absolute left-0 top-0 bottom-0 w-20 z-10 bg-gradient-to-r from-[#f4f2fa] to-transparent" />
+      <div className="absolute right-0 top-0 bottom-0 w-20 z-10 bg-gradient-to-l from-[#f4f2fa] to-transparent" />
       <div className="marquee-track animate-marquee">
         {doubled.map((item, i) => (
           <span
