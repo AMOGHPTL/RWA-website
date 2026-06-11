@@ -28,7 +28,7 @@ export default function Hero() {
       className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden dark-section"
       style={{
         backgroundColor: "#060612",
-        backgroundImage: `linear-gradient(rgba(6,6,18,0.18), rgba(6,6,18,0.10)), linear-gradient(rgba(139, 92, 246, 0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(139, 92, 246, 0.04) 1px, transparent 1px), url(${bgImg})`,
+        backgroundImage: `linear-gradient(rgba(6,6,18,0.55), rgba(6,6,18,0.45)), linear-gradient(rgba(139, 92, 246, 0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(139, 92, 246, 0.04) 1px, transparent 1px), url(${bgImg})`,
         backgroundSize: "cover, 44px 44px, 44px 44px, cover",
         backgroundPosition: "center, center, center, center",
         backgroundRepeat: "no-repeat, repeat, repeat, no-repeat",
@@ -117,7 +117,10 @@ export default function Hero() {
         {/* Headline */}
         <h1
           className="text-5xl sm:text-6xl md:text-7xl lg:text-[82px] font-extrabold text-white leading-[1.05] tracking-[-0.03em] mb-6 animate-slide-up"
-          style={{ animationDelay: "0.15s", textShadow: "0 2px 24px rgba(0,0,0,0.55)" }}
+          style={{
+            animationDelay: "0.15s",
+            textShadow: "0 2px 24px rgba(0,0,0,0.55)",
+          }}
         >
           Own a Piece of
           <br />
@@ -127,7 +130,10 @@ export default function Hero() {
         {/* Subtext */}
         <p
           className="text-slate-100 text-base sm:text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed animate-slide-up"
-          style={{ animationDelay: "0.25s", textShadow: "0 1px 12px rgba(0,0,0,0.5)" }}
+          style={{
+            animationDelay: "0.25s",
+            textShadow: "0 1px 12px rgba(0,0,0,0.5)",
+          }}
         >
           ScripFi brings institutional-grade real-world asset tokenization to
           everyone. Invest in premium real estate, commodities, and
@@ -143,7 +149,7 @@ export default function Hero() {
           {/* Glow backdrop */}
           <div className="absolute inset-0 rounded-3xl bg-violet-600/20 blur-3xl scale-95 pointer-events-none" />
           {/* Image frame */}
-          
+
           {/* Floating label */}
           <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 badge whitespace-nowrap shadow-lg shadow-violet-900/30">
             <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
@@ -195,52 +201,6 @@ export default function Hero() {
           </div>
         )}
         {error && <p className="text-red-400 text-sm mb-5">{error}</p>}
-
-        {/* Trust line */}
-        <div
-          className="flex flex-wrap items-center justify-center gap-5 text-slate-200 text-xs animate-fade-in"
-          style={{ animationDelay: "0.45s" }}
-        >
-          {[
-            "No spam, ever",
-            "Early access perks",
-            "Zero fees for founding members",
-          ].map((t) => (
-            <span key={t} className="flex items-center gap-1.5">
-              <span className="text-violet-500">✦</span> {t}
-            </span>
-          ))}
-        </div>
-
-        {/* Stats grid */}
-        <div
-          className="mt-14 grid grid-cols-2 md:grid-cols-4 gap-4 animate-slide-up"
-          style={{ animationDelay: "0.5s" }}
-        >
-          {STATS.map((stat) => (
-            <div
-              key={stat.label}
-              className="glass rounded-2xl p-4 sm:p-5 text-center hover:border-violet-500/25 transition-colors duration-300"
-            >
-              <div className="text-xl sm:text-2xl md:text-3xl font-bold text-gradient mb-1">
-                {stat.value}
-              </div>
-              <div className="text-slate-200 text-xs sm:text-sm">
-                {stat.label}
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Scroll cue */}
-      <div className="absolute bottom-7 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-float opacity-50">
-        <span className="text-slate-600 text-[10px] tracking-[0.2em] uppercase">
-          Scroll
-        </span>
-        <div className="w-5 h-8 rounded-full border border-slate-700 flex items-start justify-center pt-1.5">
-          <div className="w-1 h-1.5 rounded-full bg-violet-500 animate-bounce" />
-        </div>
       </div>
     </section>
   );
