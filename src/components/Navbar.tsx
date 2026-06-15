@@ -40,7 +40,7 @@ export default function Navbar() {
               className="text-sm font-medium px-4 py-2 rounded-full transition-all duration-200 relative group text-white/80 hover:text-white hover:bg-white/10"
             >
               {link.label}
-              <span className="absolute bottom-1 left-4 right-4 h-px bg-gradient-to-r from-violet-400 to-sky-400 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+              <span className="absolute bottom-1 left-4 right-4 h-px bg-gradient-to-r from-amber-500 to-amber-400 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
             </a>
           ))}
         </div>

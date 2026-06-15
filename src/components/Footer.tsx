@@ -42,15 +42,15 @@ const SOCIALS = [
 
 export default function Footer() {
   return (
-    <footer className="border-t border-violet-200/50 pt-16 pb-10 relative overflow-hidden bg-[#f4f2fa]">
-      <div className="orb w-[400px] h-[400px] bg-violet-400/[0.08] bottom-0 right-0" />
+    <footer className="border-t border-amber-200/50 pt-16 pb-10 relative overflow-hidden bg-[#faf6ee]">
+      <div className="orb w-[400px] h-[400px] bg-amber-400/[0.08] bottom-0 right-0" />
 
       <div className="max-w-7xl mx-auto px-5 sm:px-8 relative z-10">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-10 mb-14">
           {/* Brand */}
           <div className="col-span-2">
             <a href="#" className="flex items-center gap-2.5 mb-4">
-              <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-violet-500 to-sky-500 flex items-center justify-center">
+              <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-amber-600 to-amber-500 flex items-center justify-center">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                   <path d="M8 1L14 4.5V11.5L8 15L2 11.5V4.5L8 1Z" stroke="white" strokeWidth="1.5" strokeLinejoin="round"/>
                   <path d="M8 5L11 6.75V10.25L8 12L5 10.25V6.75L8 5Z" fill="white" fillOpacity="0.7"/>
@@ -70,7 +70,7 @@ export default function Footer() {
                   key={s.name}
                   href="#"
                   aria-label={s.name}
-                  className="w-8 h-8 rounded-lg bg-slate-100 border border-slate-200 flex items-center justify-center text-slate-600 hover:text-violet-600 hover:border-violet-300 hover:bg-violet-50 transition-all duration-200"
+                  className="w-8 h-8 rounded-lg bg-slate-100 border border-slate-200 flex items-center justify-center text-slate-600 hover:text-amber-600 hover:border-amber-300 hover:bg-amber-50 transition-all duration-200"
                 >
                   {s.icon}
                 </a>

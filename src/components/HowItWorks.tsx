@@ -66,8 +66,8 @@ export default function HowItWorks() {
   const { ref, visible } = useReveal()
 
   return (
-    <section id="how-it-works" ref={ref} className="py-24 md:py-32 relative overflow-hidden" style={{ background: 'linear-gradient(180deg, #f4f2fa 0%, #ece8f8 50%, #f4f2fa 100%)' }}>
-      <div className="orb w-[600px] h-[600px] bg-violet-400/[0.12] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
+    <section id="how-it-works" ref={ref} className="py-24 md:py-32 relative overflow-hidden" style={{ background: 'linear-gradient(180deg, #faf6ee 0%, #f7ebd5 50%, #faf6ee 100%)' }}>
+      <div className="orb w-[600px] h-[600px] bg-amber-400/[0.12] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
 
       <div className="max-w-7xl mx-auto px-5 sm:px-8 relative z-10">
         {/* Header */}
@@ -85,7 +85,7 @@ export default function HowItWorks() {
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 lg:gap-4 relative">
           {/* Desktop connector line */}
           <div className="hidden lg:block absolute top-[52px] left-[14%] right-[14%] pointer-events-none">
-            <div className="h-px bg-gradient-to-r from-violet-500/40 via-sky-500/40 to-violet-500/40 w-full" />
+            <div className="h-px bg-gradient-to-r from-amber-600/40 via-amber-500/40 to-amber-600/40 w-full" />
             {/* Dots at each step midpoint */}
           </div>
 
@@ -97,21 +97,21 @@ export default function HowItWorks() {
             >
               {/* Circle */}
               <div className="relative z-10 mb-6">
-                <div className="w-[56px] h-[56px] rounded-2xl bg-gradient-to-br from-violet-600 to-indigo-700 flex items-center justify-center mx-auto shadow-lg glow-purple">
+                <div className="w-[56px] h-[56px] rounded-2xl bg-gradient-to-br from-amber-600 to-amber-500 flex items-center justify-center mx-auto shadow-lg glow-purple">
                   <span className="text-white font-bold text-xs tracking-widest">{step.number}</span>
                 </div>
               </div>
 
               {/* Card */}
-              <div className="glass rounded-2xl p-6 w-full hover:border-violet-500/25 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-violet-500/10">
-                <div className="text-violet-600 flex justify-center mb-4">{step.icon}</div>
+              <div className="glass rounded-2xl p-6 w-full hover:border-amber-500/25 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-amber-500/10">
+                <div className="text-amber-600 flex justify-center mb-4">{step.icon}</div>
                 <h3 className="text-slate-900 font-semibold text-base mb-3">{step.title}</h3>
                 <p className="text-slate-600 text-sm leading-relaxed">{step.description}</p>
               </div>
 
               {/* Mobile arrow */}
               {i < STEPS.length - 1 && (
-                <div className="lg:hidden text-violet-500/40 my-2">↓</div>
+                <div className="lg:hidden text-amber-500/40 my-2">↓</div>
               )}
             </div>
           ))}

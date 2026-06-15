@@ -116,7 +116,7 @@ export default function Hero() {
               </p>
               <p className="text-slate-400 text-xs mt-0.5">
                 We'll reach out at{" "}
-                <span className="text-violet-300">{email}</span>
+                <span className="text-amber-300">{email}</span>
               </p>
             </div>
           </div>

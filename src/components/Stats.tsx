@@ -44,10 +44,10 @@ export default function Stats() {
   return (
     <section ref={ref} id="roadmap" className="py-16 sm:py-20 relative overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-violet-100/60 via-transparent to-sky-100/40" />
+      <div className="absolute inset-0 bg-gradient-to-r from-amber-100/60 via-transparent to-orange-100/40" />
       <div className="absolute inset-0 grid-bg opacity-50" />
-      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-violet-500/30 to-transparent" />
-      <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-violet-500/30 to-transparent" />
+      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-amber-500/30 to-transparent" />
+      <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-amber-500/30 to-transparent" />
 
       <div className="max-w-7xl mx-auto px-5 sm:px-8 relative z-10">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">

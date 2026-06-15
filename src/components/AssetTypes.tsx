@@ -7,9 +7,9 @@ const ASSETS = [
     description: 'Prime commercial & residential properties across global tier-1 cities.',
     apy: '8–12%',
     tag: 'High Demand',
-    gradient: 'from-violet-600/20 to-violet-900/5',
-    border: 'rgba(139,92,246,0.25)',
-    tagColor: 'text-violet-300 bg-violet-500/10 border-violet-500/20',
+    gradient: 'from-amber-600/20 to-amber-900/5',
+    border: 'rgba(245,158,11,0.25)',
+    tagColor: 'text-amber-700 bg-amber-500/10 border-amber-500/20',
   },
   {
     emoji: '🪙',
@@ -27,9 +27,9 @@ const ASSETS = [
     description: 'Toll roads, energy grids, data centers, and utility assets.',
     apy: '10–15%',
     tag: 'Stable Income',
-    gradient: 'from-sky-600/20 to-sky-900/5',
-    border: 'rgba(56,189,248,0.2)',
-    tagColor: 'text-sky-300 bg-sky-500/10 border-sky-500/20',
+    gradient: 'from-orange-600/20 to-orange-900/5',
+    border: 'rgba(217,119,6,0.2)',
+    tagColor: 'text-orange-700 bg-orange-500/10 border-orange-500/20',
   },
   {
     emoji: '📊',
@@ -78,9 +78,9 @@ export default function AssetTypes() {
   const { ref, visible } = useReveal()
 
   return (
-    <section id="assets" ref={ref} className="py-24 md:py-32 relative overflow-hidden bg-[#f4f2fa]">
-      <div className="orb w-[600px] h-[600px] bg-sky-400/[0.1] -top-20 -right-40" />
-      <div className="orb w-[500px] h-[500px] bg-violet-400/[0.1] bottom-0 -left-40" />
+    <section id="assets" ref={ref} className="py-24 md:py-32 relative overflow-hidden bg-[#faf6ee]">
+      <div className="orb w-[600px] h-[600px] bg-orange-400/[0.1] -top-20 -right-40" />
+      <div className="orb w-[500px] h-[500px] bg-amber-400/[0.1] bottom-0 -left-40" />
 
       <div className="max-w-7xl mx-auto px-5 sm:px-8 relative z-10">
         {/* Header */}

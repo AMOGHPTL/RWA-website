@@ -96,9 +96,9 @@ export default function Features() {
   const { ref, visible } = useReveal()
 
   return (
-    <section id="features" ref={ref} className="py-24 md:py-32 relative overflow-hidden bg-[#f4f2fa]">
-      <div className="orb w-[500px] h-[500px] bg-violet-400/[0.1] top-0 right-0" />
-      <div className="orb w-[400px] h-[400px] bg-sky-400/[0.07] bottom-0 left-0" />
+    <section id="features" ref={ref} className="py-24 md:py-32 relative overflow-hidden bg-[#faf6ee]">
+      <div className="orb w-[500px] h-[500px] bg-amber-400/[0.1] top-0 right-0" />
+      <div className="orb w-[400px] h-[400px] bg-orange-400/[0.07] bottom-0 left-0" />
 
       <div className="max-w-7xl mx-auto px-5 sm:px-8">
         {/* Header */}
@@ -121,7 +121,7 @@ export default function Features() {
               className={`feature-card p-7 reveal ${visible ? 'visible' : ''}`}
               style={{ transitionDelay: `${f.delay}s` }}
             >
-              <div className={`mb-5 ${f.accent === 'violet' ? 'text-violet-500' : 'text-sky-500'}`}>
+              <div className={`mb-5 ${f.accent === 'violet' ? 'text-amber-500' : 'text-orange-500'}`}>
                 {f.icon}
               </div>
               <h3 className="text-slate-900 font-semibold text-lg mb-2.5">{f.title}</h3>

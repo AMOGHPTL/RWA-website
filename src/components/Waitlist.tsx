@@ -32,19 +32,19 @@ export default function Waitlist() {
   }
 
   return (
-    <section id="waitlist" className="py-24 md:py-32 relative overflow-hidden" style={{ background: 'linear-gradient(180deg, #f4f2fa 0%, #e9e4f8 50%, #f4f2fa 100%)' }}>
-      <div className="orb w-[800px] h-[800px] bg-violet-400/[0.15] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
+    <section id="waitlist" className="py-24 md:py-32 relative overflow-hidden" style={{ background: 'linear-gradient(180deg, #faf6ee 0%, #f7ebd5 50%, #faf6ee 100%)' }}>
+      <div className="orb w-[800px] h-[800px] bg-amber-400/[0.15] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
 
       <div className="max-w-5xl mx-auto px-5 sm:px-8 relative z-10">
         {/* Main CTA card */}
-        <div className="glass rounded-3xl p-8 sm:p-12 md:p-16 border border-violet-500/20 relative overflow-hidden">
+        <div className="glass rounded-3xl p-8 sm:p-12 md:p-16 border border-amber-500/20 relative overflow-hidden">
           {/* Corner glow decorations */}
-          <div className="absolute -top-20 -right-20 w-60 h-60 rounded-full bg-violet-600/20 blur-3xl pointer-events-none" />
-          <div className="absolute -bottom-20 -left-20 w-60 h-60 rounded-full bg-sky-600/15 blur-3xl pointer-events-none" />
+          <div className="absolute -top-20 -right-20 w-60 h-60 rounded-full bg-amber-600/20 blur-3xl pointer-events-none" />
+          <div className="absolute -bottom-20 -left-20 w-60 h-60 rounded-full bg-amber-500/15 blur-3xl pointer-events-none" />
 
           <div className="relative z-10 text-center max-w-2xl mx-auto">
             {/* Icon */}
-            <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-violet-600 to-sky-500 flex items-center justify-center mx-auto mb-7 shadow-2xl glow-purple">
+            <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-amber-600 to-amber-500 flex items-center justify-center mx-auto mb-7 shadow-2xl glow-purple">
               <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
                 <path d="M14 3l3 6 7 1-5 5 1.2 7L14 19l-6.2 3.2L9 15.2 4 10.2l7-1 3-6z" fill="white" fillOpacity="0.9"/>
               </svg>
@@ -106,7 +106,7 @@ export default function Waitlist() {
                       {name ? `Welcome, ${name}!` : "You're in!"}
                     </p>
                     <p className="text-slate-600 text-xs mt-0.5">
-                      Confirmation sent to <span className="text-violet-300">{email}</span>
+                      Confirmation sent to <span className="text-amber-600">{email}</span>
                     </p>
                   </div>
                 </div>
@@ -126,7 +126,7 @@ export default function Waitlist() {
         <div className="mt-10 flex flex-wrap items-center justify-center gap-8 text-slate-600 text-sm">
           <div className="flex items-center gap-2">
             <div className="flex -space-x-2">
-              {['bg-violet-500', 'bg-sky-500', 'bg-amber-500', 'bg-pink-500'].map(c => (
+              {['bg-amber-500', 'bg-amber-600', 'bg-amber-400', 'bg-orange-500'].map(c => (
                 <div key={c} className={`w-7 h-7 rounded-full ${c} border-2 border-white`} />
               ))}
             </div>
