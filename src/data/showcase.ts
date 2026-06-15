@@ -3,91 +3,91 @@
 //  Each item = one card. `imageSide` controls which side the
 //  image sits on for desktop ('left' or 'right').
 // ─────────────────────────────────────────────────────────────
-import ownershipTransfer from '../assets/ownershipTransfer.png'
-import fractionalOwnership from '../assets/fractionalOwnership.png'
-import daoGovernance from '../assets/DOAGovernanace.png'
-import yieldBearingAssets from '../assets/yeildBearingAssets.png'
+import ownershipTransfer from "../assets/ownershipCopy.png";
+import fractionalOwnership from "../assets/fractionalOwnership.png";
+import daoGovernance from "../assets/DOAGovernanace.png";
+import yieldBearingAssets from "../assets/yeildBearingAssets.png";
 
 export interface ShowcaseItem {
-  tag: string
-  title: string
-  highlight: string // the word(s) in the title rendered with gradient
-  description: string
-  bullets: string[]
-  image: string
-  imageAlt: string
-  imageSide: 'left' | 'right'
-  accent: 'violet' | 'cyan'
-  bg: string // card background — matched to the image's paper color
+  tag: string;
+  title: string;
+  highlight: string; // the word(s) in the title rendered with gradient
+  description: string;
+  bullets: string[];
+  image: string;
+  imageAlt: string;
+  imageSide: "left" | "right";
+  accent: "violet" | "cyan";
+  bg: string; // card background — matched to the image's paper color
 }
 
 export const SHOWCASE_ITEMS: ShowcaseItem[] = [
   {
-    tag: 'Seamless Transfers',
-    title: 'Instant',
-    highlight: 'Ownership Transfer',
+    tag: "Seamless Transfers",
+    title: "Instant",
+    highlight: "Ownership Transfer",
     description:
-      'Transferring real-world asset ownership traditionally takes weeks of paperwork, notaries, and middlemen. On ScripFi, ownership moves on-chain in seconds — cryptographically verified, legally binding, and recorded forever.',
+      "Transferring real-world asset ownership traditionally takes weeks of paperwork, notaries, and middlemen. On ScripFi, ownership moves on-chain in seconds — cryptographically verified, legally binding, and recorded forever.",
     bullets: [
-      'On-chain settlement in seconds, not weeks',
-      'Zero paperwork — smart contracts handle legal transfer',
-      'Full audit trail of every ownership change',
+      "On-chain settlement in seconds, not weeks",
+      "Zero paperwork — smart contracts handle legal transfer",
+      "Full audit trail of every ownership change",
     ],
     image: ownershipTransfer,
-    imageAlt: 'Ownership transfer illustration',
-    imageSide: 'left',
-    accent: 'violet',
-    bg: '#E9E5DA',
+    imageAlt: "Ownership transfer illustration",
+    imageSide: "left",
+    accent: "violet",
+    bg: "#ede5cc",
   },
   {
-    tag: 'Own a Fraction',
-    title: 'True',
-    highlight: 'Fractional Ownership',
+    tag: "Own a Fraction",
+    title: "True",
+    highlight: "Fractional Ownership",
     description:
-      'Premium assets were always reserved for the wealthy. We split high-value real estate, commodities, and infrastructure into affordable tokens — so you can own a verifiable slice of assets that used to require millions.',
+      "Premium assets were always reserved for the wealthy. We split high-value real estate, commodities, and infrastructure into affordable tokens — so you can own a verifiable slice of assets that used to require millions.",
     bullets: [
-      'Start investing from as little as $50',
-      'Each token is a legally backed share of the asset',
-      'Build a diversified portfolio across asset classes',
+      "Start investing from as little as $50",
+      "Each token is a legally backed share of the asset",
+      "Build a diversified portfolio across asset classes",
     ],
     image: fractionalOwnership,
-    imageAlt: 'Fractional ownership illustration',
-    imageSide: 'right',
-    accent: 'cyan',
-    bg: '#E9E5DA',
+    imageAlt: "Fractional ownership illustration",
+    imageSide: "right",
+    accent: "cyan",
+    bg: "#ede5cc",
   },
   {
-    tag: 'Community Powered',
-    title: 'Decentralized',
-    highlight: 'DAO Governance',
+    tag: "Community Powered",
+    title: "Decentralized",
+    highlight: "DAO Governance",
     description:
-      'Token holders are not silent investors — they are decision makers. Vote on asset management, fee structures, and platform upgrades through our on-chain DAO. Every vote is transparent and every proposal is community driven.',
+      "Token holders are not silent investors — they are decision makers. Vote on asset management, fee structures, and platform upgrades through our on-chain DAO. Every vote is transparent and every proposal is community driven.",
     bullets: [
-      'One token, one vote — fully on-chain governance',
-      'Propose and vote on asset-level decisions',
-      'Transparent treasury managed by the community',
+      "One token, one vote — fully on-chain governance",
+      "Propose and vote on asset-level decisions",
+      "Transparent treasury managed by the community",
     ],
     image: daoGovernance,
-    imageAlt: 'DAO governance illustration',
-    imageSide: 'left',
-    accent: 'violet',
-    bg: '#E9E5DA',
+    imageAlt: "DAO governance illustration",
+    imageSide: "left",
+    accent: "violet",
+    bg: "#ede5cc",
   },
   {
-    tag: 'Passive Income',
-    title: 'Yield-Bearing',
-    highlight: 'Real Assets',
+    tag: "Passive Income",
+    title: "Yield-Bearing",
+    highlight: "Real Assets",
     description:
-      'Your tokens work while you sleep. Rental income, dividends, and interest generated by the underlying assets flow straight to your wallet through automated smart contracts — no claims, no forms, no waiting.',
+      "Your tokens work while you sleep. Rental income, dividends, and interest generated by the underlying assets flow straight to your wallet through automated smart contracts — no claims, no forms, no waiting.",
     bullets: [
-      'Automatic yield distribution to your wallet',
-      'Real income from rent, dividends, and interest',
-      'Track earnings in real time on your dashboard',
+      "Automatic yield distribution to your wallet",
+      "Real income from rent, dividends, and interest",
+      "Track earnings in real time on your dashboard",
     ],
     image: yieldBearingAssets,
-    imageAlt: 'Yield-bearing assets illustration',
-    imageSide: 'right',
-    accent: 'cyan',
-    bg: '#E9E5DA',
+    imageAlt: "Yield-bearing assets illustration",
+    imageSide: "right",
+    accent: "cyan",
+    bg: "#ede5cc",
   },
-]
+];

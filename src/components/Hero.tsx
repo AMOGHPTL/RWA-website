@@ -126,6 +126,7 @@ export default function Hero() {
           Docs
         </button>
       </div>
+
     </section>
   );
 }

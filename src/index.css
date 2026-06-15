@@ -296,7 +296,6 @@ body {
 .showcase-card {
   position: relative;
   border-radius: 20px;
-  border: 1px solid rgba(55, 50, 35, 0.12);
   box-shadow: 0 18px 50px rgba(45, 40, 28, 0.18);
   overflow: hidden;
 }

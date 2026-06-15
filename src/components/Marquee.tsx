@@ -1,21 +1,21 @@
 const ITEMS = [
-  '🏢 Real Estate',
-  '🪙 Gold & Silver',
-  '⚡ Infrastructure',
-  '📊 Private Credit',
-  '🎨 Fine Art',
-  '🌱 Carbon Credits',
-  '🚢 Trade Finance',
-  '🏭 Industrial Assets',
-  '🎵 IP Royalties',
-  '🌾 Agricultural Land',
+  ' Real Estate',
+  ' Gold & Silver',
+  ' Infrastructure',
+  ' Private Credit',
+  ' Fine Art',
+  ' Carbon Credits',
+  ' Trade Finance',
+  ' Industrial Assets',
+  ' IP Royalties',
+  ' Agricultural Land',
 ]
 
 export default function Marquee() {
   const doubled = [...ITEMS, ...ITEMS]
 
   return (
-    <div className="py-5 border-y border-violet-200/50 overflow-hidden relative bg-[#f4f2fa]">
+    <div className="py-5 border-y border-violet-200/50 overflow-hidden relative bg-[#000000]">
       <div className="absolute left-0 top-0 bottom-0 w-20 z-10 bg-gradient-to-r from-[#f4f2fa] to-transparent" />
       <div className="absolute right-0 top-0 bottom-0 w-20 z-10 bg-gradient-to-l from-[#f4f2fa] to-transparent" />
       <div className="marquee-track animate-marquee">

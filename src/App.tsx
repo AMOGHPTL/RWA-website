@@ -12,7 +12,7 @@ import Footer from "./components/Footer";
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-[#a5a5ae] overflow-x-hidden">
+    <div className="min-h-screen bg-[#a5a5ae]">
       <Navbar />
       <Hero />
       {/* <Marquee /> */}
