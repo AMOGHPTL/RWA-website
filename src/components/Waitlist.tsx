@@ -40,7 +40,9 @@ export default function Waitlist() {
             Connect With Us →
           </a>
           <a
-            href="#"
+            href="#docs"
+            target="_blank"
+            rel="noopener noreferrer"
             className="px-7 py-4 rounded-full text-sm font-semibold w-full sm:w-auto text-center text-[#44423a] bg-white transition-all duration-200 hover:bg-[#f5f1e8]"
             style={{ border: '1px solid rgba(55,50,35,0.25)' }}
           >

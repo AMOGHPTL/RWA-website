@@ -11,7 +11,7 @@ const LINKS = {
     { label: 'About Us', href: '#' },
     { label: 'Blog', href: '#' },
     { label: 'Contact', href: '#waitlist' },
-    { label: 'Docs', href: '#' },
+    { label: 'Docs', href: '#docs' },
   ],
 }
 
@@ -91,6 +91,8 @@ export default function Footer() {
                       <a
                         href={item.href}
                         onClick={e => handleNav(e, item.href)}
+                        target={item.href === '#docs' ? '_blank' : undefined}
+                        rel={item.href === '#docs' ? 'noopener noreferrer' : undefined}
                         className="text-[#57544a] text-sm hover:text-[#26241f] transition-colors duration-200"
                       >
                         {item.label}

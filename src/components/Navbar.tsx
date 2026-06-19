@@ -2,26 +2,44 @@ import { useState } from 'react'
 import scripFiLogo from '../assets/LogoYellow.svg'
 
 const NAV_LINKS = [
-  { label: 'Features', href: '#features' },
+  { label: 'Core Pillars', href: '#showcase' },
+  { label: 'Roadmap', href: '#roadmap' },
   { label: 'How It Works', href: '#how-it-works' },
   { label: 'Assets', href: '#assets' },
-  { label: 'Roadmap', href: '#roadmap' },
 ]
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
 
-  const scrollToWaitlist = () => {
-    document.getElementById('waitlist')?.scrollIntoView({ behavior: 'smooth' })
+  const isDocsPage = () => window.location.hash.replace(/^#\/?/, '') === 'docs'
+
+  const handleNav = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault()
+    const id = href.slice(1)
+    if (isDocsPage()) {
+      // Leave the docs page first, then scroll to the section once home mounts.
+      window.location.hash = ''
+      setTimeout(() => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' }), 60)
+    } else {
+      document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+    }
     setMenuOpen(false)
   }
+
+  const goHome = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault()
+    window.location.hash = ''
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+    setMenuOpen(false)
+  }
+
 
   return (
     <nav className="absolute top-0 left-0 right-0 z-50 backdrop-blur-xs">
       <div className="max-w-7xl mx-auto px-1 sm:px-2 py-4 flex items-center justify-between">
         {/* Logo */}
-        <a href="#" className="flex items-center gap-2.5 group">
-          <img src={scripFiLogo} alt="ScripFi logo" className="w-9 h-9 object-contain group-hover:scale-110 transition-transform duration-200" />
+        <a href="#" onClick={goHome} className="flex items-center gap-2.5">
+          <img src={scripFiLogo} alt="ScripFi logo" className="w-9 h-9 object-contain" />
           <span className="font-bold text-2xl tracking-tight text-white">
             Scrip<span className="">Fi</span>
           </span>
@@ -33,6 +51,7 @@ export default function Navbar() {
             <a
               key={link.label}
               href={link.href}
+              onClick={e => handleNav(e, link.href)}
               className="text-sm font-medium px-4 py-2 rounded-full transition-all duration-200 relative group text-white/80 hover:text-white hover:bg-white/10"
             >
               {link.label}
@@ -43,15 +62,9 @@ export default function Navbar() {
 
         {/* Desktop CTA */}
         <div className="hidden md:flex items-center gap-3">
-          <button className="px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 border border-white/20 text-white/80 hover:text-white hover:bg-white/10 hover:border-white/40">
-            Whitepaper
-          </button>
-          <button
-            onClick={scrollToWaitlist}
-            className="btn-primary px-5 py-2 rounded-full text-sm"
-          >
-            Get Early Access →
-          </button>
+          <a href="#docs" target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 border border-white/20 text-white/80 hover:text-white hover:bg-white/10 hover:border-white/40">
+            Docs
+          </a>
         </div>
 
         {/* Mobile Toggle */}
@@ -79,21 +92,15 @@ export default function Navbar() {
                 key={link.label}
                 href={link.href}
                 className="text-sm font-medium py-3 px-4 rounded-xl transition-all text-white/75 hover:text-white hover:bg-white/10"
-                onClick={() => setMenuOpen(false)}
+                onClick={e => handleNav(e, link.href)}
               >
                 {link.label}
               </a>
             ))}
             <div className="border-t mt-3 pt-4 flex flex-col gap-3 border-white/10">
-              <button className="w-full py-3 rounded-xl text-sm font-medium border transition-all border-white/20 text-white/80 hover:bg-white/10 hover:text-white">
-                Whitepaper
-              </button>
-              <button
-                onClick={scrollToWaitlist}
-                className="btn-primary w-full py-3 rounded-xl text-sm font-semibold"
-              >
-                Get Early Access →
-              </button>
+              <a href="#docs" target="_blank" rel="noopener noreferrer" onClick={() => setMenuOpen(false)} className="block w-full py-3 rounded-xl text-sm font-medium text-center border transition-all border-white/20 text-white/80 hover:bg-white/10 hover:text-white">
+                Docs
+              </a>
             </div>
           </div>
         </div>

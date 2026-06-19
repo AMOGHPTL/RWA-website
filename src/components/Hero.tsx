@@ -41,7 +41,7 @@ export default function Hero() {
           style={{ animationDelay: "0.1s" }}
         >
           <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
-          Coming Soon — Waitlist Open
+          Coming Soon
         </div>
 
         {/* Headline */}
@@ -52,9 +52,10 @@ export default function Hero() {
             textShadow: "0 2px 24px rgba(0,0,0,0.55)",
           }}
         >
-          The Tokenized RWAs
-          <br />
-          <span className="text-gradient">Hub</span>
+          ScripFi
+          <span className="block text-3xl sm:text-4xl md:text-5xl lg:text-[52px] mt-3">
+            The Tokenized RWAs <span className="text-gradient">Hub</span>
+          </span>
         </h1>
 
         {/* Subtext */}
@@ -122,9 +123,9 @@ export default function Hero() {
           </div>
         )} */}
         {/* {error && <p className="text-red-400 text-sm mb-5">{error}</p>} */}
-        <button className="bg-white rounded-full px-7 py-3.5 text-sm whitespace-nowrap animate-slide-up" style={{ animationDelay: "0.38s" }}>
+        <a href="#docs" target="_blank" rel="noopener noreferrer" className="inline-block bg-white rounded-full px-7 py-3.5 text-sm whitespace-nowrap animate-slide-up" style={{ animationDelay: "0.38s" }}>
           Docs
-        </button>
+        </a>
       </div>
 
     </section>
