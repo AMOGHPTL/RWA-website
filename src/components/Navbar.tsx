@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import scripFiLogo from '../assets/LogoYellow.svg'
 
 const NAV_LINKS = [
   { label: 'Features', href: '#features' },
@@ -20,12 +21,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-1 sm:px-2 py-4 flex items-center justify-between">
         {/* Logo */}
         <a href="#" className="flex items-center gap-2.5 group">
-          {/* <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-violet-500 to-sky-500 flex items-center justify-center shadow-lg shadow-violet-500/30 group-hover:scale-110 group-hover:shadow-violet-500/50 transition-all duration-200">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-              <path d="M8 1L14 4.5V11.5L8 15L2 11.5V4.5L8 1Z" stroke="white" strokeWidth="1.5" strokeLinejoin="round"/>
-              <path d="M8 5L11 6.75V10.25L8 12L5 10.25V6.75L8 5Z" fill="white" fillOpacity="0.7"/>
-            </svg>
-          </div> */}
+          <img src={scripFiLogo} alt="ScripFi logo" className="w-9 h-9 object-contain group-hover:scale-110 transition-transform duration-200" />
           <span className="font-bold text-2xl tracking-tight text-white">
             Scrip<span className="">Fi</span>
           </span>

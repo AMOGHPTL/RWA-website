@@ -1,3 +1,5 @@
+import scripFiLogo from '../assets/LogoYellow.svg'
+
 const LINKS = {
   Platform: [
     { label: 'Core Pillars', href: '#showcase' },
@@ -52,12 +54,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="max-w-xs">
             <a href="#" className="flex items-center gap-2.5 mb-3">
-              <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-amber-600 to-amber-500 flex items-center justify-center">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                  <path d="M8 1L14 4.5V11.5L8 15L2 11.5V4.5L8 1Z" stroke="white" strokeWidth="1.5" strokeLinejoin="round"/>
-                  <path d="M8 5L11 6.75V10.25L8 12L5 10.25V6.75L8 5Z" fill="white" fillOpacity="0.7"/>
-                </svg>
-              </div>
+              <img src={scripFiLogo} alt="ScripFi logo" className="w-8 h-8 object-contain" />
               <span className="text-[#26241f] font-bold text-lg tracking-tight">
                 Scrip<span className="text-[#6b675c]">Fi</span>
               </span>
