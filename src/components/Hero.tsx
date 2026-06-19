@@ -1,28 +1,6 @@
-import { useState } from "react";
 import bgImg from "../assets/bg2.png";
 
-const STATS = [
-  { value: "47,200+", label: "Investors Waitlisted" },
-  { value: "$2.5B+", label: "Target Assets" },
-  { value: "120+", label: "Partner Institutions" },
-  { value: "50+", label: "Countries" },
-];
-
 export default function Hero() {
-  const [email, setEmail] = useState("");
-  const [submitted, setSubmitted] = useState(false);
-  const [error, setError] = useState("");
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!email.includes("@")) {
-      setError("Please enter a valid email.");
-      return;
-    }
-    setError("");
-    setSubmitted(true);
-  };
-
   return (
     <section
       className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden backdrop-blur-lg"
